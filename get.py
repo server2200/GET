@@ -4,6 +4,11 @@ import subprocess
 import sys
 import platform
 
+if os.name != 'nt':
+    sys.exit(1)
+else:
+    pass
+
 def PIP(package=str):
     subprocess.run(['pip', 'install', f"{package}"]) 
 
